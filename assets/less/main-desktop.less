@@ -177,9 +177,11 @@ h6.subtitle {
 
   .list {
 
-    .time {
+    .time {      
       position: relative;
       padding: 0px 27px;
+      border-bottom:1px solid #DDD;
+
       .arrows {
         position: absolute;
         padding:3px 6px 10px;
@@ -189,6 +191,7 @@ h6.subtitle {
         color: #666;
         border: 1px solid #BBB;
         background-color: #DEDEDE;
+
         &.prev {
           left:0px;
         }
@@ -197,24 +200,82 @@ h6.subtitle {
         }
       }
 
-      ul {
-        padding: 0;
-        margin: 0;
-        list-style:none;
+      .container {
+        width:245px;
+        overflow: hidden;
 
-        li {
-          display: inline-block;
-          font-size: 1.571em;/* 22px/14px */
-          line-height: 35px;
-          padding-left: 30px;
-          width:215px;
-          i {
-            font-style: normal;
-            color:#999;
+        ul {
+          padding: 0;
+          margin: 0;
+          list-style:none;
+          width: 9999999px;
+
+          li {
+            display: inline-block;
+            font-size: 1.571em;/* 22px/14px */
+            line-height: 35px;
+            padding-left: 30px;
+            width:215px;
+            i {
+              font-style: normal;
+              color:#999;
+            }
           }
         }
       }
+    }
 
+    .row {
+      width: 299px;
+      overflow: hidden;
+      border-right:1px solid #DDD;
+      .container {
+        width:99999px;
+      }
+      .show {
+        border:1px solid #DDD;
+        border-top: 0;
+        border-right: 0;
+
+        @show_width: 275px;
+
+        padding: 12px;
+        float:left;
+        width: @show_width;
+
+        h2,h3 {
+          font-size:14px;
+          margin:0;
+          padding:0;
+          line-height: inherit;
+        }
+        h3 {
+          color:#999;
+        }
+        img {
+          float:left;
+          margin-right: 12px;
+          display: none;
+        }
+        &.active {
+          img {
+            display: block;
+          }
+        }
+        &:hover{
+          background-color: #EFEFEF;
+        }
+
+        &.q1 {
+          width: @show_width/4;
+        }
+        &.q2 {
+          width: @show_width/2;
+        }
+        &.q3 {
+          width: @show_width - @show_width / 4;
+        }
+      }
     }
 
   }

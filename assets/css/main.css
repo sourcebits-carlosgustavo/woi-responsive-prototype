@@ -232,6 +232,7 @@ h6.subtitle {
 .whats-on .list .time {
   position: relative;
   padding: 0px 27px;
+  border-bottom: 1px solid #DDD;
 }
 .whats-on .list .time .arrows {
   position: absolute;
@@ -248,12 +249,17 @@ h6.subtitle {
 .whats-on .list .time .arrows.next {
   right: 0px;
 }
-.whats-on .list .time ul {
+.whats-on .list .time .container {
+  width: 245px;
+  overflow: hidden;
+}
+.whats-on .list .time .container ul {
   padding: 0;
   margin: 0;
   list-style: none;
+  width: 9999999px;
 }
-.whats-on .list .time ul li {
+.whats-on .list .time .container ul li {
   display: inline-block;
   font-size: 1.571em;
   /* 22px/14px */
@@ -262,9 +268,55 @@ h6.subtitle {
   padding-left: 30px;
   width: 215px;
 }
-.whats-on .list .time ul li i {
+.whats-on .list .time .container ul li i {
   font-style: normal;
   color: #999;
+}
+.whats-on .list .row {
+  width: 299px;
+  overflow: hidden;
+  border-right: 1px solid #DDD;
+}
+.whats-on .list .row .container {
+  width: 99999px;
+}
+.whats-on .list .row .show {
+  border: 1px solid #DDD;
+  border-top: 0;
+  border-right: 0;
+  padding: 12px;
+  float: left;
+  width: 275px;
+}
+.whats-on .list .row .show h2,
+.whats-on .list .row .show h3 {
+  font-size: 14px;
+  margin: 0;
+  padding: 0;
+  line-height: inherit;
+}
+.whats-on .list .row .show h3 {
+  color: #999;
+}
+.whats-on .list .row .show img {
+  float: left;
+  margin-right: 12px;
+  display: none;
+}
+.whats-on .list .row .show.active img {
+  display: block;
+}
+.whats-on .list .row .show:hover {
+  background-color: #EFEFEF;
+}
+.whats-on .list .row .show.q1 {
+  width: 68.75px;
+}
+.whats-on .list .row .show.q2 {
+  width: 137.5px;
+}
+.whats-on .list .row .show.q3 {
+  width: 206.25px;
 }
 /* tablet version */
 @media screen and (max-width: 768px) {
