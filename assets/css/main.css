@@ -1,3 +1,15 @@
+/*---------------------------------------------------
+    LESS Elements 0.6
+  ---------------------------------------------------
+    A set of useful LESS mixins by Dmitry Fadeyev
+    Special thanks for mixin suggestions to:
+      Kris Van Herzeele,
+      Benoit Adam,
+      Portenart Emile-Victor,
+      Ryan Faerman
+
+    More info at: http://lesselements.com
+-----------------------------------------------------*/
 .clear {
   *zoom: 1;
 }
@@ -150,6 +162,8 @@ h6.subtitle {
   width: 103.125%;
   margin: 0 -1.5625%;
   *zoom: 1;
+  margin-bottom: 30px;
+  border-bottom: 2px solid #CCC;
 }
 .content .featured:before,
 .content .featured:after {
@@ -202,6 +216,113 @@ h6.subtitle {
 .content .featured .item .actions {
   float: right;
   margin-top: 20px;
+}
+.content .channel-tabs {
+  display: block;
+  width: 103.125%;
+  margin: 0 -1.5625%;
+  *zoom: 1;
+}
+.content .channel-tabs:before,
+.content .channel-tabs:after {
+  content: "";
+  display: table;
+}
+.content .channel-tabs:after {
+  clear: both;
+}
+.content .channel-tabs ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+.content .channel-tabs ul li {
+  margin: 0;
+  display: inline-block;
+  text-transform: uppercase;
+}
+.content .channel-tabs ul li a {
+  color: #666;
+  font-size: 2.143em;
+  margin-right: 20px;
+}
+.content .channel-tabs ul li a.active {
+  color: #000;
+}
+.content .channel-tabs .tab-contents {
+  margin-top: 20px;
+  background-color: #EFEFEF;
+}
+.content .channel-tabs .tab-contents .tab .item {
+  width: 300px;
+  margin: 5px 10px 5px 5px;
+  float: left;
+}
+.content .channel-tabs .tab-contents .tab .item h2 {
+  font-size: 18px;
+  margin: 10px 0;
+  line-height: inherit;
+}
+.content .channel-tabs .tab-contents .tab .item .info {
+  font-weight: bold;
+  color: #999;
+  font-size: 12px;
+}
+.content .channel-tabs .tab-contents .tab .item .thumb {
+  position: relative;
+  border: 1px solid #d6d6d6;
+  background-color: #FFF;
+  float: left;
+  padding: 9px;
+  margin-right: 10px;
+  -webkit-border-top-right-radius: 3px;
+  -webkit-border-bottom-right-radius: 3px;
+  -webkit-border-bottom-left-radius: 3px;
+  -webkit-border-top-left-radius: 3px;
+  -moz-border-radius-topright: 3px;
+  -moz-border-radius-bottomright: 3px;
+  -moz-border-radius-bottomleft: 3px;
+  -moz-border-radius-topleft: 3px;
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+  border-bottom-left-radius: 3px;
+  border-top-left-radius: 3px;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+}
+.content .channel-tabs .tab-contents .tab .item .thumb img {
+  display: block;
+}
+.content .channel-tabs .tab-contents .tab .item .thumb .time {
+  position: absolute;
+  background-color: #FFF;
+  right: 12px;
+  top: 76px;
+  padding: 0px 5px;
+}
+.content .channel-tabs .tab-contents .tab .item .thumb a {
+  float: left;
+  margin-top: 10px;
+}
+.content .channel-tabs .tab-contents .tab .item .thumb .icon-plus {
+  margin-left: 60px;
+}
+.content .channel-tabs .tab-contents .tab .item .thumb .icon-time {
+  margin-left: 58px;
+}
+.content .channel-tabs .tab-contents .more {
+  display: block;
+  text-align: center;
+  background-color: #DDD;
+  margin-top: 10px;
+  padding: 5px 0;
+  color: #666;
+  font-size: 20px;
+}
+.content .channel-tabs .tab-contents .more:hover {
+  text-decoration: none;
+  background-color: #CCC;
 }
 .whats-on {
   display: inline;

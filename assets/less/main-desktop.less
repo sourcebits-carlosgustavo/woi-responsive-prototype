@@ -100,8 +100,11 @@ h6.subtitle {
   .column(8);
   margin-top:25px;
 
+
   .featured {
     .row(8);
+    margin-bottom:30px;
+    border-bottom: 2px solid #CCC;
 
     .container {
       width:100%;
@@ -146,6 +149,101 @@ h6.subtitle {
       .actions {
         float:right;
         margin-top:20px;
+      }
+    }
+  }
+
+  .channel-tabs {
+    .row(8);
+
+    ul {
+      margin:0;
+      padding:0;
+      list-style-type: none;
+      li {
+        margin:0;
+        display: inline-block;
+        text-transform: uppercase;
+        a {
+          color:#666;
+          font-size: 2.143em;
+          margin-right: 20px;
+          &.active {
+            color:#000;
+          }
+        }
+      }
+    }
+
+    .tab-contents {
+      margin-top: 20px;
+      background-color: #EFEFEF;
+
+      .tab {
+
+        .item {
+          width:300px;
+          margin:5px 10px 5px 5px;
+          float:left;
+
+          h2 {
+            font-size: 18px;
+            margin: 10px 0;
+            line-height: inherit;
+          }
+          .info {
+            font-weight: bold;
+            color: #999;
+            font-size: 12px;
+          }
+
+          .thumb {
+            position: relative;
+            border:1px solid #d6d6d6;
+            background-color: #FFF;
+            float:left;
+            padding:9px;
+            margin-right: 10px;
+            .border-radius(3px,3px,3px,3px);
+
+            img {
+              display: block;
+            }
+            .time {
+              position: absolute;
+              background-color: #FFF;
+              right: 12px;
+              top:76px;
+              padding:0px 5px;
+            }
+
+            a {
+              float:left;
+              margin-top:10px;
+            }
+            .icon-plus {
+              margin-left:60px;
+            }
+            .icon-time {
+              margin-left:58px;
+            }
+          }
+        }
+
+      }
+
+      .more {
+        display: block;
+        text-align: center;
+        background-color: #DDD;
+        margin-top: 10px;
+        padding: 5px 0;
+        color:#666;
+        font-size: 20px;
+        &:hover {
+          text-decoration:none;
+          background-color: #CCC;
+        }
       }
     }
   }
