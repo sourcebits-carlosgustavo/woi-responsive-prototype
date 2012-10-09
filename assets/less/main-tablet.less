@@ -1,9 +1,10 @@
 body {
+  padding-top: 15px;
   font-size: 12px;
 }
 
 #container {
-  max-width: 960px;
+  max-width: auto;
   margin: 0 auto;
 }
 
@@ -35,6 +36,112 @@ body {
       a {
         padding:6px 5px 8px;
       }
+    }
+  }
+}
+
+.content {
+  .column(8);
+  margin-top:25px;
+
+
+  .featured {
+    .row(8);
+
+    .container {
+      height: 350px;
+    }
+
+    .item {
+      width:511px;
+      img {
+        width:100%;
+      }
+    }
+  }
+
+  .channel-tabs {
+    .row(8);
+    margin-top: 30px;
+
+    .tab-contents {
+      .tab {
+        .item {
+          display: none;
+          &:nth-child(-n+3){
+            display: block;
+          }
+          width:100%;
+        }
+      }
+    }
+  }
+}
+
+.fb-activity {
+  .column(12);
+  margin-top:30px;
+
+  .container {
+    .row(12);
+
+    .slider {
+
+      .item {
+        width: 350px;
+      }
+    }
+  }
+}
+
+.whats-on {
+  .column(4);
+  margin-top:25px;
+
+  .list {
+    .time {
+      .container {
+        width:215px;
+      }
+    }
+    .row {
+      width: 100%;
+      .show {
+        @show_width: 240px;
+        width: @show_width;
+        &.q1 {
+          width: @show_width/4;
+        }
+        &.q2 {
+          width: @show_width/2;
+        }
+        &.q3 {
+          width: @show_width - @show_width / 4;
+        }
+      }
+    }
+
+  }
+}
+
+.trending {
+  .column(8);
+  margin-top:30px;
+
+  .container {
+    .slider {
+      .item {
+        width: 455px;
+        border-right: 0;
+      }
+    }
+  }
+}
+
+footer {
+  .search {
+    input {
+      width: 270px;
     }
   }
 }

@@ -33,10 +33,10 @@ body:after {
 body:after {
   clear: both;
 }
+/* default desktop version */
 body {
   padding-top: 65px;
 }
-/* default desktop version */
 #container {
   max-width: 960px;
   margin: 0 auto;
@@ -400,10 +400,10 @@ h6.subtitle {
 .whats-on nav {
   position: relative;
   padding: 30px 10px 5px;
-  background-color: #BBB;
+  background-color: #f6f6f6;
 }
 .whats-on nav a {
-  font-size: 30px;
+  font-size: 2.143em;
   color: #666;
   margin-right: 5px;
 }
@@ -694,10 +694,11 @@ footer .nav p {
 /* tablet version */
 @media screen and (max-width: 768px) {
   body {
+    padding-top: 15px;
     font-size: 12px;
   }
   #container {
-    max-width: 960px;
+    max-width: auto;
     margin: 0 auto;
   }
   .header .logo {
@@ -735,5 +736,120 @@ footer .nav p {
   }
   .main-nav ul li a {
     padding: 6px 5px 8px;
+  }
+  .content {
+    display: inline;
+    float: left;
+    width: 64.58333333333334%;
+    margin: 0 1.0416666666666665%;
+    margin-top: 25px;
+  }
+  .content .featured {
+    display: block;
+    width: 103.125%;
+    margin: 0 -1.5625%;
+    *zoom: 1;
+  }
+  .content .featured:before,
+  .content .featured:after {
+    content: "";
+    display: table;
+  }
+  .content .featured:after {
+    clear: both;
+  }
+  .content .featured .container {
+    height: 350px;
+  }
+  .content .featured .item {
+    width: 511px;
+  }
+  .content .featured .item img {
+    width: 100%;
+  }
+  .content .channel-tabs {
+    display: block;
+    width: 103.125%;
+    margin: 0 -1.5625%;
+    *zoom: 1;
+    margin-top: 30px;
+  }
+  .content .channel-tabs:before,
+  .content .channel-tabs:after {
+    content: "";
+    display: table;
+  }
+  .content .channel-tabs:after {
+    clear: both;
+  }
+  .content .channel-tabs .tab-contents .tab .item {
+    display: none;
+    width: 100%;
+  }
+  .content .channel-tabs .tab-contents .tab .item:nth-child(-n+3) {
+    display: block;
+  }
+  .fb-activity {
+    display: inline;
+    float: left;
+    width: 97.91666666666666%;
+    margin: 0 1.0416666666666665%;
+    margin-top: 30px;
+  }
+  .fb-activity .container {
+    display: block;
+    width: 102.08333333333333%;
+    margin: 0 -1.0416666666666665%;
+    *zoom: 1;
+  }
+  .fb-activity .container:before,
+  .fb-activity .container:after {
+    content: "";
+    display: table;
+  }
+  .fb-activity .container:after {
+    clear: both;
+  }
+  .fb-activity .container .slider .item {
+    width: 350px;
+  }
+  .whats-on {
+    display: inline;
+    float: left;
+    width: 31.25%;
+    margin: 0 1.0416666666666665%;
+    margin-top: 25px;
+  }
+  .whats-on .list .time .container {
+    width: 215px;
+  }
+  .whats-on .list .row {
+    width: 100%;
+  }
+  .whats-on .list .row .show {
+    width: 240px;
+  }
+  .whats-on .list .row .show.q1 {
+    width: 60px;
+  }
+  .whats-on .list .row .show.q2 {
+    width: 120px;
+  }
+  .whats-on .list .row .show.q3 {
+    width: 180px;
+  }
+  .trending {
+    display: inline;
+    float: left;
+    width: 64.58333333333334%;
+    margin: 0 1.0416666666666665%;
+    margin-top: 30px;
+  }
+  .trending .container .slider .item {
+    width: 455px;
+    border-right: 0;
+  }
+  footer .search input {
+    width: 270px;
   }
 }
