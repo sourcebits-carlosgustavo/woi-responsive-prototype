@@ -9,8 +9,8 @@ h6.subtitle {
   background-color: #666;
   color:#FFF;
   font-weight: bold;
-  margin:-5px 0px 0px -5px;
-  padding: 3px 5px;
+  margin:-10px 0px 0px -5px;
+  padding: 1px 5px;
   z-index: 9999;
 }
 
@@ -187,14 +187,14 @@ h6.subtitle {
           float:left;
 
           h2 {
-            font-size: 18px;
+            font-size: 1.286em;
             margin: 10px 0;
             line-height: inherit;
           }
           .info {
             font-weight: bold;
             color: #999;
-            font-size: 12px;
+            font-size: 0.857em;
           }
 
           .thumb {
@@ -239,12 +239,65 @@ h6.subtitle {
         margin-top: 10px;
         padding: 5px 0;
         color:#666;
-        font-size: 20px;
+        font-size: 1.429em;
         &:hover {
           text-decoration:none;
           background-color: #CCC;
         }
       }
+    }
+  }
+}
+
+.fb-activity {
+  .column(8);
+
+  position: relative;
+
+  margin-top:30px;
+
+  .container {
+    .row(8);
+    height:105px;
+    overflow: hidden;
+    background-color: #EFEFEF;
+
+    .slider {
+      width: 999999px;
+
+      .item {
+        width: 278px;
+        padding: 20px 0px 20px 40px;
+        border-right: 1px solid #CCC;
+        display: inline-block;
+
+        .thumb {
+          float:left;
+          margin-right: 10px;
+        }
+        h2 {
+          font-size: 14px;
+          margin: 0;
+          color: #878787;
+          line-height: inherit;
+        }
+      }
+    }
+  }
+
+  .arrows {
+    position: absolute;
+
+    font-weight: bold;
+    font-size: 20px;
+    color: #666;
+    top:40px;
+
+    &.prev {
+      left:0px;
+    }
+    &.next {
+      right:0px;
     }
   }
 }

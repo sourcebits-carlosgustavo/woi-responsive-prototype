@@ -47,8 +47,8 @@ h6.subtitle {
   background-color: #666;
   color: #FFF;
   font-weight: bold;
-  margin: -5px 0px 0px -5px;
-  padding: 3px 5px;
+  margin: -10px 0px 0px -5px;
+  padding: 1px 5px;
   z-index: 9999;
 }
 .header .logo {
@@ -259,14 +259,14 @@ h6.subtitle {
   float: left;
 }
 .content .channel-tabs .tab-contents .tab .item h2 {
-  font-size: 18px;
+  font-size: 1.286em;
   margin: 10px 0;
   line-height: inherit;
 }
 .content .channel-tabs .tab-contents .tab .item .info {
   font-weight: bold;
   color: #999;
-  font-size: 12px;
+  font-size: 0.857em;
 }
 .content .channel-tabs .tab-contents .tab .item .thumb {
   position: relative;
@@ -318,11 +318,68 @@ h6.subtitle {
   margin-top: 10px;
   padding: 5px 0;
   color: #666;
-  font-size: 20px;
+  font-size: 1.429em;
 }
 .content .channel-tabs .tab-contents .more:hover {
   text-decoration: none;
   background-color: #CCC;
+}
+.fb-activity {
+  display: inline;
+  float: left;
+  width: 64.58333333333334%;
+  margin: 0 1.0416666666666665%;
+  position: relative;
+  margin-top: 30px;
+}
+.fb-activity .container {
+  display: block;
+  width: 103.125%;
+  margin: 0 -1.5625%;
+  *zoom: 1;
+  height: 105px;
+  overflow: hidden;
+  background-color: #EFEFEF;
+}
+.fb-activity .container:before,
+.fb-activity .container:after {
+  content: "";
+  display: table;
+}
+.fb-activity .container:after {
+  clear: both;
+}
+.fb-activity .container .slider {
+  width: 999999px;
+}
+.fb-activity .container .slider .item {
+  width: 278px;
+  padding: 20px 0px 20px 40px;
+  border-right: 1px solid #CCC;
+  display: inline-block;
+}
+.fb-activity .container .slider .item .thumb {
+  float: left;
+  margin-right: 10px;
+}
+.fb-activity .container .slider .item h2 {
+  font-size: 14px;
+  margin: 0;
+  color: #878787;
+  line-height: inherit;
+}
+.fb-activity .arrows {
+  position: absolute;
+  font-weight: bold;
+  font-size: 20px;
+  color: #666;
+  top: 40px;
+}
+.fb-activity .arrows.prev {
+  left: 0px;
+}
+.fb-activity .arrows.next {
+  right: 0px;
 }
 .whats-on {
   display: inline;
