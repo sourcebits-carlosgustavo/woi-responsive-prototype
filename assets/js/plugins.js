@@ -28,4 +28,29 @@ $(function(){
       
     }
   });
+
+  $.breakpoint({
+    condition: function () {
+      return window.matchMedia('screen and (max-width:480px)').matches;
+    },
+    first_enter: function () {
+      
+    },
+    enter: function () {
+      // hide nav buttons
+      var $mainNav = $(".main-nav");
+      $mainNav.find(".watchlist button").text('Watchlist');
+      $mainNav.find(".search input").hide();
+      $mainNav.find(".search a").removeClass("hide");
+
+      // change feature icons
+      var $featured = $(".featured");
+      $featured.find(".actions .favourite").removeClass("btn btn-small").addClass("icon-search").text("");
+      $featured.find(".actions .schedule").removeClass("btn btn-small").addClass("icon-time").text("");
+      $featured.find(".actions .add-to").removeClass("btn btn-small").addClass("icon-plus").text("");
+    },
+    exit: function () {
+      
+    }
+  });
 });

@@ -61,19 +61,21 @@
         <ul>
           <li><a href='#' class='active'>HOME</a></li>
           <li><a href='#'>TV GUIDE</a></li>
-          <li><a href='#'>CHANNELS</a></li>
-          <li><a href='#'>MOVIES</a></li>
-          <li><a href='#'>VIDEOS</a></li>
-          <li><a href='#'>APPS</a></li>
+          <li><a href='#' class='hidden-phone'>CHANNELS</a></li>
+          <li><a href='#' class='hidden-phone'>MOVIES</a></li>
+          <li><a href='#' class='hidden-phone'>VIDEOS</a></li>
+          <li><a href='#' class='hidden-phone'>APPS</a></li>
+          <li><a href='#' class='visible-phone'>MORE</a></li>
         </ul>
 
-        <div class='watchlist'>
+        <div class='watchlist hidden-phone'>
           <button class='btn'>My Watchlist</button>
         </div>
         <!-- / watchlist -->
 
-        <div class='search'>
+        <div class='search hidden-phone'>
           <input type='text' placeholder='Search TV'>
+          <a href='#' class='hide icon-search'></a>
         </div>
         <!-- / search -->
       </nav>
@@ -100,9 +102,9 @@
                 </div>
 
                 <div class='actions'>
-                  <a href='#' class='btn btn-small'>Favourite</a>
-                  <a href='#' class='btn btn-small'>Schedule</a>
-                  <a href='#' class='btn btn-small'>Add to…</a>
+                  <a href='#' class='btn btn-small favourite'>Favourite</a>
+                  <a href='#' class='btn btn-small schedule'>Schedule</a>
+                  <a href='#' class='btn btn-small add-to'>Add to…</a>
                 </div>
               </div>
 
@@ -245,7 +247,7 @@
       </div>
       <!-- / content -->
 
-      <aside class='whats-on'>
+      <aside class='whats-on hidden-phone'>
         <h6 class='subtitle'>WHAT'S ON</h6>
 
         <nav>

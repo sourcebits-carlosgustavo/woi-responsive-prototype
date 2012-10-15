@@ -1,0 +1,177 @@
+body {
+  padding-top: 15px;
+  font-size: 12px;
+}
+
+#container {
+  max-width: auto;
+  margin: 0 auto;
+}
+
+.header {
+
+  .logo {
+    .column(2);
+    h1,h2 {
+      display: none;
+    }
+  }
+  .social {
+    display: none;
+  }
+  .actions {
+    .column(10);
+    padding-top: 8px;
+    select {
+      width: 120px;
+      margin:0;
+    }
+  }
+}
+
+.main-nav {
+  width:100%;
+  margin: 15px 0;
+  ul {
+    .column(9);
+    li {
+      a {
+        display: inline-block;
+        font-size: 1.571em;/* 22px/14px */
+        color:#FFF;
+        padding:6px 10px 8px;
+      }
+    }
+  }
+}
+
+.content {
+  .column(12);
+  margin-top:10px;
+
+
+  .featured {
+    .row(12);
+    margin-bottom:0px;
+
+    .container {
+      height: 230px;
+    }
+
+    .arrows {
+      top:65px;
+    }
+
+    .item {
+      width:320px;
+      img {
+        width:100%;
+      }
+      .info {
+        margin: 5px 0px 0px 5px;
+        width:190px;
+        h2 {
+          line-height: inherit;
+        }
+      }
+      .actions {
+        float:right;
+        a {
+          margin-right: 5px;
+        }
+      }
+    }
+  }
+
+  .channel-tabs {
+    display: none;
+  }
+}
+
+.fb-activity {
+  .column(12);
+  margin-top:30px;
+
+  .container {
+    .row(12);
+
+    .slider {
+
+      .item {
+        width: 100%;
+      }
+    }
+  }
+}
+
+.whats-on {
+  .column(12);
+  margin-top:25px;
+
+  .list {
+    .time {
+      .container {
+        width:215px;
+      }
+    }
+    .row {
+      width: 100%;
+      .show {
+        @show_width: 300px;
+        width: @show_width;
+        &.q1 {
+          width: @show_width/4;
+        }
+        &.q2 {
+          width: @show_width/2;
+        }
+        &.q3 {
+          width: @show_width - @show_width / 4;
+        }
+      }
+    }
+
+  }
+}
+
+.trending {
+  .column(12);
+  margin-top:30px;
+
+  .container {
+    .slider {
+      .item {
+        width: 455px;
+        border-right: 0;
+      }
+    }
+  }
+}
+
+footer {
+  
+  .search {
+    .column(12);
+    input {
+      width: 223px;
+    }
+  }
+  
+  .newsletter {
+    .column(12);
+    text-align: center;
+    input {
+      width: 188px;
+    }
+  }
+  
+  .nav {
+    .column(12);
+    ul {
+      li {
+        margin-right: 4px;
+      }
+    }
+  }
+  
+}

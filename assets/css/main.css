@@ -616,7 +616,7 @@ footer .search input {
   float: left;
   border: 0;
   width: 370px;
-  font-size: 16px;
+  font-size: 1.143em;
   padding: 10px;
 }
 footer .search a {
@@ -653,7 +653,7 @@ footer .newsletter input {
   float: right;
   border: 0;
   width: 220px;
-  font-size: 16px;
+  font-size: 1.143em;
   padding: 10px;
 }
 footer .newsletter a {
@@ -851,5 +851,196 @@ footer .nav p {
   }
   footer .search input {
     width: 270px;
+  }
+}
+/* phone version */
+@media screen and (max-width: 480px) {
+  body {
+    padding-top: 15px;
+    font-size: 12px;
+  }
+  #container {
+    max-width: auto;
+    margin: 0 auto;
+  }
+  .header .logo {
+    display: inline;
+    float: left;
+    width: 14.583333333333334%;
+    margin: 0 1.0416666666666665%;
+  }
+  .header .logo h1,
+  .header .logo h2 {
+    display: none;
+  }
+  .header .social {
+    display: none;
+  }
+  .header .actions {
+    display: inline;
+    float: left;
+    width: 81.25%;
+    margin: 0 1.0416666666666665%;
+    padding-top: 8px;
+  }
+  .header .actions select {
+    width: 120px;
+    margin: 0;
+  }
+  .main-nav {
+    width: 100%;
+    margin: 15px 0;
+  }
+  .main-nav ul {
+    display: inline;
+    float: left;
+    width: 72.91666666666666%;
+    margin: 0 1.0416666666666665%;
+  }
+  .main-nav ul li a {
+    display: inline-block;
+    font-size: 1.571em;
+    /* 22px/14px */
+  
+    color: #FFF;
+    padding: 6px 10px 8px;
+  }
+  .content {
+    display: inline;
+    float: left;
+    width: 97.91666666666666%;
+    margin: 0 1.0416666666666665%;
+    margin-top: 10px;
+  }
+  .content .featured {
+    display: block;
+    width: 102.08333333333333%;
+    margin: 0 -1.0416666666666665%;
+    *zoom: 1;
+    margin-bottom: 0px;
+  }
+  .content .featured:before,
+  .content .featured:after {
+    content: "";
+    display: table;
+  }
+  .content .featured:after {
+    clear: both;
+  }
+  .content .featured .container {
+    height: 230px;
+  }
+  .content .featured .arrows {
+    top: 65px;
+  }
+  .content .featured .item {
+    width: 320px;
+  }
+  .content .featured .item img {
+    width: 100%;
+  }
+  .content .featured .item .info {
+    margin: 5px 0px 0px 5px;
+    width: 190px;
+  }
+  .content .featured .item .info h2 {
+    line-height: inherit;
+  }
+  .content .featured .item .actions {
+    float: right;
+  }
+  .content .featured .item .actions a {
+    margin-right: 5px;
+  }
+  .content .channel-tabs {
+    display: none;
+  }
+  .fb-activity {
+    display: inline;
+    float: left;
+    width: 97.91666666666666%;
+    margin: 0 1.0416666666666665%;
+    margin-top: 30px;
+  }
+  .fb-activity .container {
+    display: block;
+    width: 102.08333333333333%;
+    margin: 0 -1.0416666666666665%;
+    *zoom: 1;
+  }
+  .fb-activity .container:before,
+  .fb-activity .container:after {
+    content: "";
+    display: table;
+  }
+  .fb-activity .container:after {
+    clear: both;
+  }
+  .fb-activity .container .slider .item {
+    width: 100%;
+  }
+  .whats-on {
+    display: inline;
+    float: left;
+    width: 97.91666666666666%;
+    margin: 0 1.0416666666666665%;
+    margin-top: 25px;
+  }
+  .whats-on .list .time .container {
+    width: 215px;
+  }
+  .whats-on .list .row {
+    width: 100%;
+  }
+  .whats-on .list .row .show {
+    width: 300px;
+  }
+  .whats-on .list .row .show.q1 {
+    width: 75px;
+  }
+  .whats-on .list .row .show.q2 {
+    width: 150px;
+  }
+  .whats-on .list .row .show.q3 {
+    width: 225px;
+  }
+  .trending {
+    display: inline;
+    float: left;
+    width: 97.91666666666666%;
+    margin: 0 1.0416666666666665%;
+    margin-top: 30px;
+  }
+  .trending .container .slider .item {
+    width: 455px;
+    border-right: 0;
+  }
+  footer .search {
+    display: inline;
+    float: left;
+    width: 97.91666666666666%;
+    margin: 0 1.0416666666666665%;
+  }
+  footer .search input {
+    width: 223px;
+  }
+  footer .newsletter {
+    display: inline;
+    float: left;
+    width: 97.91666666666666%;
+    margin: 0 1.0416666666666665%;
+    text-align: center;
+  }
+  footer .newsletter input {
+    width: 188px;
+  }
+  footer .nav {
+    display: inline;
+    float: left;
+    width: 97.91666666666666%;
+    margin: 0 1.0416666666666665%;
+  }
+  footer .nav ul li {
+    margin-right: 4px;
   }
 }
