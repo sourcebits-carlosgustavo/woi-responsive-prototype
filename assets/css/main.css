@@ -1,3 +1,93 @@
+@import 'fonts.css';
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+nav,
+section {
+  display: block;
+}
+audio,
+canvas,
+video {
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+}
+audio:not([controls]) {
+  display: none;
+}
+html {
+  font-size: 100%;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
+a:hover,
+a:active {
+  outline: 0;
+}
+sub,
+sup {
+  position: relative;
+  font-size: 75%;
+  line-height: 0;
+  vertical-align: baseline;
+}
+sup {
+  top: -0.5em;
+}
+sub {
+  bottom: -0.25em;
+}
+img {
+  max-width: 100%;
+  vertical-align: middle;
+  border: 0;
+  -ms-interpolation-mode: bicubic;
+}
+button,
+input,
+select,
+textarea {
+  margin: 0;
+  font-size: 100%;
+  vertical-align: middle;
+}
+button,
+input {
+  *overflow: visible;
+  line-height: normal;
+}
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  cursor: pointer;
+  -webkit-appearance: button;
+}
+input[type="search"] {
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  -webkit-appearance: textfield;
+}
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button {
+  -webkit-appearance: none;
+}
+textarea {
+  overflow: auto;
+  vertical-align: top;
+}
 /*---------------------------------------------------
     LESS Elements 0.6
   ---------------------------------------------------
@@ -12,6 +102,7 @@
 -----------------------------------------------------*/
 .clear {
   *zoom: 1;
+  display: block;
 }
 .clear:before,
 .clear:after {
@@ -24,6 +115,7 @@
 body {
   width: 100%;
   *zoom: 1;
+  display: block;
 }
 body:before,
 body:after {
@@ -35,83 +127,130 @@ body:after {
 }
 /* default desktop version */
 body {
-  padding-top: 65px;
+  background: #180b2c;
+  text-align: center;
+  font-family: 'DosisRegular', sans-serif;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  font-weight: normal;
+  line-height: normal;
+}
+/* CLEARING */
+/* Clearfix Method */
+.clearfix:after {
+  content: ".";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  line-height: 0;
+  height: 0;
+}
+.clearfix {
+  display: block;
+}
+html[xmlns] .clearfix {
+  display: block;
+}
+* html .clearfix {
+  zoom: 1;
+}
+/* IE6 */
+*:first-child + html .clearfix {
+  zoom: 1;
+}
+/* IE7 */
+.clear {
+  clear: both;
 }
 #container {
+  background: #110b1c;
   max-width: 960px;
   margin: 0 auto;
+  padding: 0 10px;
+  text-align: left;
+  box-shadow: 0 0 15px 2px #000,
+              0 12px 130px 0 #710c1e inset;
+}
+.btn {
+  background: #380928;
+  border: #5b224b 1px solid;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  color: #a85b9c;
+  text-shadow: none;
+}
+.btn:hover,
+.btn.active {
+  background-color: #2d0823;
+  color: #a85b9c;
 }
 h6.subtitle {
-  display: inline;
-  position: absolute;
-  background-color: #666;
-  color: #FFF;
-  font-weight: bold;
-  margin: -10px 0px 0px -5px;
-  padding: 1px 5px;
-  z-index: 9999;
+  color: #bda5ba;
+  font-family: 'DosisRegular', sans-serif;
+  font-size: 25px;
+}
+.header {
+  padding-top: 10px;
 }
 .header .logo {
   display: inline;
   float: left;
-  width: 31.25%;
+  width: 29.166666666666668%;
   margin: 0 1.0416666666666665%;
 }
 .header .logo img {
   float: left;
   margin: 3px 15px 0px 0px;
 }
-.header .logo h1,
-.header .logo h2 {
-  margin: 0px;
-  font-size: 2.333em;
-}
 .header .logo h1 {
-  color: #929292;
+  color: #fff;
+  font-size: 28px;
+  font-family: 'DosisLight', sans-serif;
 }
 .header .logo h2 {
-  color: #b1b1b1;
+  color: #c7a4b9;
+  font-size: 22px;
+  font-family: 'DosisLight', sans-serif;
 }
-.header .social {
+.header .social-actions-col {
   display: inline;
   float: left;
-  width: 14.583333333333334%;
+  width: 35.41666666666667%;
   margin: 0 1.0416666666666665%;
-  margin-left: 9.374999999999998%;
-  padding-top: 24px;
+  margin-left: 32.291666666666664%;
+  text-align: right;
 }
-.header .actions {
-  display: inline;
-  float: left;
-  width: 39.58333333333333%;
-  margin: 0 1.0416666666666665%;
-  padding-top: 20px;
+.header .social-actions-col .social {
+  padding-top: 10px;
 }
-.header .actions select {
-  margin: 0;
+.header .social-actions-col .actions {
+  padding-top: 10px;
+}
+.header .social-actions-col .actions select {
+  background: #2b0921;
+  border: #512446 1px solid;
   margin-left: 20px;
+  width: 100px;
+  color: #a85b9c;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
 }
 .main-nav {
-  display: block;
-  width: 102.08333333333333%;
-  margin: 0 -1.0416666666666665%;
-  *zoom: 1;
-  margin-top: 15px;
-  padding: 5px 0px;
-  background-color: #666;
-}
-.main-nav:before,
-.main-nav:after {
-  content: "";
-  display: table;
-}
-.main-nav:after {
-  clear: both;
+  padding: 10px 0px;
+  border-bottom: #612d54 1px solid;
 }
 .main-nav ul {
   display: inline;
   float: left;
-  width: 56.25%;
+  width: 60.416666666666664%;
   margin: 0 1.0416666666666665%;
   padding: 0px;
   list-style: none;
@@ -121,47 +260,52 @@ h6.subtitle {
 }
 .main-nav ul li a {
   display: inline-block;
-  font-size: 1.571em;
-  /* 22px/14px */
-
-  color: #FFF;
+  font-size: 20px;
+  color: #a85b9c;
   padding: 6px 10px 8px;
 }
 .main-nav ul li a:hover,
 .main-nav ul li a.active {
-  background-color: #AAA;
+  color: #feef02;
+  text-shadow: 0 2px 17px #ff616b;
+  text-decoration: none;
 }
-.main-nav .watchlist {
+.main-nav .nav-right {
   display: inline;
   float: left;
-  width: 14.583333333333334%;
+  width: 35.41666666666667%;
   margin: 0 1.0416666666666665%;
+}
+.main-nav .nav-right .watchlist {
+  float: left;
   padding-top: 2px;
   text-align: center;
 }
-.main-nav .search {
-  display: inline;
+.main-nav .nav-right .search {
   float: left;
-  width: 22.916666666666664%;
-  margin: 0 1.0416666666666665%;
+  width: 100px;
   padding-top: 2px;
 }
-.main-nav .search input {
-  margin: 0;
-  width: 90%;
+.main-nav .nav-right .search input {
+  background: #2b0921;
+  border: #512446 1px solid;
+  margin: 0 22px;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
 }
 .content {
   display: inline;
   float: left;
-  width: 64.58333333333334%;
+  width: 60.416666666666664%;
   margin: 0 1.0416666666666665%;
-  margin-top: 25px;
+  margin-top: 10px;
 }
 .content .featured {
-  display: block;
-  width: 103.125%;
-  margin: 0 -1.5625%;
+  width: 104.16666666666667%;
+  margin: 0 -2.083333333333333%;
   *zoom: 1;
+  display: block;
   margin-bottom: 30px;
   border-bottom: 2px solid #CCC;
 }
@@ -218,10 +362,10 @@ h6.subtitle {
   margin-top: 20px;
 }
 .content .channel-tabs {
-  display: block;
-  width: 103.125%;
-  margin: 0 -1.5625%;
+  width: 104.16666666666667%;
+  margin: 0 -2.083333333333333%;
   *zoom: 1;
+  display: block;
 }
 .content .channel-tabs:before,
 .content .channel-tabs:after {
@@ -327,16 +471,16 @@ h6.subtitle {
 .fb-activity {
   display: inline;
   float: left;
-  width: 64.58333333333334%;
+  width: 47.91666666666667%;
   margin: 0 1.0416666666666665%;
   position: relative;
   margin-top: 60px;
 }
 .fb-activity .container {
-  display: block;
-  width: 103.125%;
-  margin: 0 -1.5625%;
+  width: 104.16666666666667%;
+  margin: 0 -2.083333333333333%;
   *zoom: 1;
+  display: block;
   height: 105px;
   overflow: hidden;
   background-color: #EFEFEF;
@@ -392,9 +536,9 @@ h6.subtitle {
 .whats-on {
   display: inline;
   float: left;
-  width: 31.25%;
+  width: 35.41666666666667%;
   margin: 0 1.0416666666666665%;
-  margin-top: 25px;
+  margin-top: 10px;
   position: relative;
 }
 .whats-on nav {
@@ -414,6 +558,10 @@ h6.subtitle {
   position: absolute;
   right: 5px;
   bottom: 5px;
+}
+.whats-on .list {
+  background: #181123;
+  border: 1px solid #292238;
 }
 .whats-on .list .time {
   position: relative;
@@ -459,20 +607,15 @@ h6.subtitle {
   color: #999;
 }
 .whats-on .list .row {
-  width: 299px;
   overflow: hidden;
-  border-right: 1px solid #DDD;
 }
 .whats-on .list .row .container {
   width: 99999px;
 }
 .whats-on .list .row .show {
-  border: 1px solid #DDD;
-  border-top: 0;
-  border-right: 0;
   padding: 12px;
   float: left;
-  width: 275px;
+  width: 340px;
 }
 .whats-on .list .row .show h2,
 .whats-on .list .row .show h3 {
@@ -496,18 +639,18 @@ h6.subtitle {
   background-color: #EFEFEF;
 }
 .whats-on .list .row .show.q1 {
-  width: 68.75px;
+  width: 85px;
 }
 .whats-on .list .row .show.q2 {
-  width: 137.5px;
+  width: 170px;
 }
 .whats-on .list .row .show.q3 {
-  width: 206.25px;
+  width: 255px;
 }
 .trending {
   display: inline;
   float: left;
-  width: 31.25%;
+  width: 22.916666666666664%;
   margin: 0 1.0416666666666665%;
   position: relative;
   margin-top: 60px;
@@ -594,7 +737,7 @@ footer {
 footer .search {
   display: inline;
   float: left;
-  width: 47.91666666666667%;
+  width: 35.41666666666667%;
   margin: 0 1.0416666666666665%;
 }
 footer .search input {
@@ -630,7 +773,7 @@ footer .search a {
 footer .newsletter {
   display: inline;
   float: left;
-  width: 47.91666666666667%;
+  width: 35.41666666666667%;
   margin: 0 1.0416666666666665%;
   text-align: right;
 }
@@ -672,7 +815,7 @@ footer .newsletter p {
 footer .nav {
   display: inline;
   float: left;
-  width: 97.91666666666666%;
+  width: 72.91666666666666%;
   margin: 0 1.0416666666666665%;
 }
 footer .nav ul {
@@ -704,7 +847,7 @@ footer .nav p {
   .header .logo {
     display: inline;
     float: left;
-    width: 14.583333333333334%;
+    width: 10.416666666666668%;
     margin: 0 1.0416666666666665%;
   }
   .header .logo h1,
@@ -714,14 +857,14 @@ footer .nav p {
   .header .social {
     display: inline;
     float: left;
-    width: 22.916666666666664%;
+    width: 16.666666666666664%;
     margin: 0 1.0416666666666665%;
     margin-left: 1.0416666666666665%;
   }
   .header .actions {
     display: inline;
     float: left;
-    width: 56.25%;
+    width: 41.66666666666667%;
     margin: 0 1.0416666666666665%;
   }
   .main-nav {
@@ -731,7 +874,7 @@ footer .nav p {
   .main-nav ul {
     display: inline;
     float: left;
-    width: 56.25%;
+    width: 41.66666666666667%;
     margin: 0 1.0416666666666665%;
   }
   .main-nav ul li a {
@@ -740,15 +883,15 @@ footer .nav p {
   .content {
     display: inline;
     float: left;
-    width: 64.58333333333334%;
+    width: 47.91666666666667%;
     margin: 0 1.0416666666666665%;
     margin-top: 25px;
   }
   .content .featured {
-    display: block;
-    width: 103.125%;
-    margin: 0 -1.5625%;
+    width: 104.16666666666667%;
+    margin: 0 -2.083333333333333%;
     *zoom: 1;
+    display: block;
   }
   .content .featured:before,
   .content .featured:after {
@@ -768,10 +911,10 @@ footer .nav p {
     width: 100%;
   }
   .content .channel-tabs {
-    display: block;
-    width: 103.125%;
-    margin: 0 -1.5625%;
+    width: 104.16666666666667%;
+    margin: 0 -2.083333333333333%;
     *zoom: 1;
+    display: block;
     margin-top: 30px;
   }
   .content .channel-tabs:before,
@@ -792,15 +935,15 @@ footer .nav p {
   .fb-activity {
     display: inline;
     float: left;
-    width: 97.91666666666666%;
+    width: 72.91666666666666%;
     margin: 0 1.0416666666666665%;
     margin-top: 30px;
   }
   .fb-activity .container {
-    display: block;
-    width: 102.08333333333333%;
-    margin: 0 -1.0416666666666665%;
+    width: 102.77777777777777%;
+    margin: 0 -1.3888888888888888%;
     *zoom: 1;
+    display: block;
   }
   .fb-activity .container:before,
   .fb-activity .container:after {
@@ -816,7 +959,7 @@ footer .nav p {
   .whats-on {
     display: inline;
     float: left;
-    width: 31.25%;
+    width: 22.916666666666664%;
     margin: 0 1.0416666666666665%;
     margin-top: 25px;
   }
@@ -841,7 +984,7 @@ footer .nav p {
   .trending {
     display: inline;
     float: left;
-    width: 64.58333333333334%;
+    width: 47.91666666666667%;
     margin: 0 1.0416666666666665%;
     margin-top: 30px;
   }
@@ -866,7 +1009,7 @@ footer .nav p {
   .header .logo {
     display: inline;
     float: left;
-    width: 14.583333333333334%;
+    width: 10.416666666666668%;
     margin: 0 1.0416666666666665%;
   }
   .header .logo h1,
@@ -879,7 +1022,7 @@ footer .nav p {
   .header .actions {
     display: inline;
     float: left;
-    width: 81.25%;
+    width: 60.416666666666664%;
     margin: 0 1.0416666666666665%;
     padding-top: 8px;
   }
@@ -894,7 +1037,7 @@ footer .nav p {
   .main-nav ul {
     display: inline;
     float: left;
-    width: 72.91666666666666%;
+    width: 54.166666666666664%;
     margin: 0 1.0416666666666665%;
   }
   .main-nav ul li a {
@@ -908,15 +1051,15 @@ footer .nav p {
   .content {
     display: inline;
     float: left;
-    width: 97.91666666666666%;
+    width: 72.91666666666666%;
     margin: 0 1.0416666666666665%;
     margin-top: 10px;
   }
   .content .featured {
-    display: block;
-    width: 102.08333333333333%;
-    margin: 0 -1.0416666666666665%;
+    width: 102.77777777777777%;
+    margin: 0 -1.3888888888888888%;
     *zoom: 1;
+    display: block;
     margin-bottom: 0px;
   }
   .content .featured:before,
@@ -958,15 +1101,15 @@ footer .nav p {
   .fb-activity {
     display: inline;
     float: left;
-    width: 97.91666666666666%;
+    width: 72.91666666666666%;
     margin: 0 1.0416666666666665%;
     margin-top: 30px;
   }
   .fb-activity .container {
-    display: block;
-    width: 102.08333333333333%;
-    margin: 0 -1.0416666666666665%;
+    width: 102.77777777777777%;
+    margin: 0 -1.3888888888888888%;
     *zoom: 1;
+    display: block;
   }
   .fb-activity .container:before,
   .fb-activity .container:after {
@@ -982,7 +1125,7 @@ footer .nav p {
   .whats-on {
     display: inline;
     float: left;
-    width: 97.91666666666666%;
+    width: 72.91666666666666%;
     margin: 0 1.0416666666666665%;
     margin-top: 25px;
   }
@@ -1007,7 +1150,7 @@ footer .nav p {
   .trending {
     display: inline;
     float: left;
-    width: 97.91666666666666%;
+    width: 72.91666666666666%;
     margin: 0 1.0416666666666665%;
     margin-top: 30px;
   }
@@ -1018,7 +1161,7 @@ footer .nav p {
   footer .search {
     display: inline;
     float: left;
-    width: 97.91666666666666%;
+    width: 72.91666666666666%;
     margin: 0 1.0416666666666665%;
   }
   footer .search input {
@@ -1027,7 +1170,7 @@ footer .nav p {
   footer .newsletter {
     display: inline;
     float: left;
-    width: 97.91666666666666%;
+    width: 72.91666666666666%;
     margin: 0 1.0416666666666665%;
     text-align: center;
   }
@@ -1037,7 +1180,7 @@ footer .nav p {
   footer .nav {
     display: inline;
     float: left;
-    width: 97.91666666666666%;
+    width: 72.91666666666666%;
     margin: 0 1.0416666666666665%;
   }
   footer .nav ul li {

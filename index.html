@@ -8,10 +8,16 @@
     <!-- <meta name="viewport" content="width=device-width"> -->
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
+    <!-- Stylsheets -->
     <link href='http://fonts.googleapis.com/css?family=Dosis' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/main.css">
 
+    <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- Scripts -->
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script>
     <script>window.jQuery || document.write('<script src="assets/js/vendor/jquery-1.8.1.min.js"><\/script>')</script>
 
@@ -25,7 +31,7 @@
     <![endif]-->
     <div id='container'>
 
-      <div class='header'>
+      <header class='header clearfix'>
         <div class='logo'>
           <img src="assets/img/woi-logo.jpg">
           <h1>India's TV Guide</h1>
@@ -33,31 +39,31 @@
         </div>
         <!-- / logo -->
 
-        <div class='social'>
-          <button class='btn btn-mini'>Like</button>
-          <button class='btn btn-mini'>Follow</button>
-          <button class='btn btn-mini'>+1</button>
-          <button class='btn btn-mini'>RSS</button>
-        </div>
-        <!-- / social -->
+        <div class='social-actions-col'>
+          <div class='social'>
+            <button class='btn btn-mini'>Like</button>
+            <button class='btn btn-mini'>Follow</button>
+            <button class='btn btn-mini'>+1</button>
+            <button class='btn btn-mini'>RSS</button>
+          </div>
+          <!-- / social -->
 
-        <div class='actions'>
-          <button class='btn'>Sign Up</button>
-          <button class='btn'>Log In</button>
+          <div class='actions'>
+            <button class='btn'>Sign Up</button>
+            <button class='btn'>Log In</button>
 
-          <select>
-            <option>Language</option>
-            <option>English</option>
-            <option>Portuguese</option>
-          </select>
+            <select>
+              <option>Language</option>
+              <option>English</option>
+              <option>Portuguese</option>
+            </select>
+          </div>
+          <!-- / actions -->
         </div>
-        <!-- / actions -->
-      </div>
+      </header>
       <!-- / header -->
 
-      <div class='clear'></div>
-
-      <nav class='main-nav'>
+      <nav class='main-nav clearfix'>
         <ul>
           <li><a href='#' class='active'>HOME</a></li>
           <li><a href='#'>TV GUIDE</a></li>
@@ -68,16 +74,19 @@
           <li><a href='#' class='visible-phone'>MORE</a></li>
         </ul>
 
-        <div class='watchlist hidden-phone'>
-          <button class='btn'>My Watchlist</button>
-        </div>
-        <!-- / watchlist -->
+        <div class="nav-right">
+          <div class='watchlist hidden-phone'>
+            <button class='btn'>My Watchlist</button>
+          </div>
+          <!-- / watchlist -->
 
-        <div class='search hidden-phone'>
-          <input type='text' placeholder='Search TV'>
-          <a href='#' class='hide icon-search'></a>
+          <div class='search hidden-phone'>
+            <input type='text' placeholder='Search TV'>
+            <a href='#' class='hide icon-search'></a>
+          </div>
+          <!-- / search -->
         </div>
-        <!-- / search -->
+
       </nav>
 
 
