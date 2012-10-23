@@ -841,7 +841,6 @@ footer .nav p {
 /* tablet version */
 @media screen and (max-width: 768px) {
   body {
-    padding-top: 15px;
     font-size: 12px;
   }
   #container {
@@ -851,19 +850,20 @@ footer .nav p {
   .header .logo {
     display: inline;
     float: left;
-    width: 10.416666666666668%;
+    width: 47.91666666666667%;
     margin: 0 1.0416666666666665%;
   }
-  .header .logo h1,
-  .header .logo h2 {
-    display: none;
+  .header .social-actions-col {
+    display: inline;
+    float: left;
+    width: 47.91666666666667%;
+    margin: 0 1.0416666666666665%;
   }
   .header .social {
     display: inline;
     float: left;
-    width: 16.666666666666664%;
+    width: 47.91666666666667%;
     margin: 0 1.0416666666666665%;
-    margin-left: 1.0416666666666665%;
   }
   .header .actions {
     display: inline;
@@ -872,13 +872,12 @@ footer .nav p {
     margin: 0 1.0416666666666665%;
   }
   .main-nav {
-    width: 100%;
     margin: 15px 0;
   }
   .main-nav ul {
     display: inline;
     float: left;
-    width: 41.66666666666667%;
+    width: 97.91666666666666%;
     margin: 0 1.0416666666666665%;
   }
   .main-nav ul li a {
@@ -887,7 +886,7 @@ footer .nav p {
   .content {
     display: inline;
     float: left;
-    width: 47.91666666666667%;
+    width: 60.416666666666664%;
     margin: 0 1.0416666666666665%;
     margin-top: 25px;
   }
@@ -939,7 +938,7 @@ footer .nav p {
   .fb-activity {
     display: inline;
     float: left;
-    width: 72.91666666666666%;
+    width: 47.91666666666667%;
     margin: 0 1.0416666666666665%;
     margin-top: 30px;
   }
@@ -963,7 +962,7 @@ footer .nav p {
   .whats-on {
     display: inline;
     float: left;
-    width: 22.916666666666664%;
+    width: 35.41666666666667%;
     margin: 0 1.0416666666666665%;
     margin-top: 25px;
   }
@@ -1003,7 +1002,6 @@ footer .nav p {
 /* phone version */
 @media screen and (max-width: 480px) {
   body {
-    padding-top: 15px;
     font-size: 12px;
   }
   #container {
@@ -1013,26 +1011,32 @@ footer .nav p {
   .header .logo {
     display: inline;
     float: left;
-    width: 10.416666666666668%;
+    width: 35.41666666666667%;
     margin: 0 1.0416666666666665%;
   }
   .header .logo h1,
   .header .logo h2 {
     display: none;
   }
-  .header .social {
-    display: none;
-  }
-  .header .actions {
+  .header .social-actions-col {
     display: inline;
     float: left;
     width: 60.416666666666664%;
     margin: 0 1.0416666666666665%;
+  }
+  .header .social-actions-col .social {
+    display: none;
+  }
+  .header .social-actions-col .actions {
+    display: inline;
+    float: left;
+    width: 97.91666666666666%;
+    margin: 0 1.0416666666666665%;
     padding-top: 8px;
   }
-  .header .actions select {
+  .header .social-actions-col .actions select {
     width: 120px;
-    margin: 0;
+    margin: 5px 0 0 0;
   }
   .main-nav {
     width: 100%;
@@ -1041,7 +1045,7 @@ footer .nav p {
   .main-nav ul {
     display: inline;
     float: left;
-    width: 54.166666666666664%;
+    width: 97.91666666666666%;
     margin: 0 1.0416666666666665%;
   }
   .main-nav ul li a {
@@ -1055,7 +1059,7 @@ footer .nav p {
   .content {
     display: inline;
     float: left;
-    width: 72.91666666666666%;
+    width: 97.91666666666666%;
     margin: 0 1.0416666666666665%;
     margin-top: 10px;
   }
@@ -1078,10 +1082,10 @@ footer .nav p {
     height: 230px;
   }
   .content .featured .arrows {
-    top: 65px;
+    top: 95px;
   }
   .content .featured .item {
-    width: 320px;
+    width: 511px;
   }
   .content .featured .item img {
     width: 100%;
@@ -1105,13 +1109,13 @@ footer .nav p {
   .fb-activity {
     display: inline;
     float: left;
-    width: 72.91666666666666%;
+    width: 97.91666666666666%;
     margin: 0 1.0416666666666665%;
     margin-top: 30px;
   }
   .fb-activity .container {
-    width: 102.77777777777777%;
-    margin: 0 -1.3888888888888888%;
+    width: 102.08333333333333%;
+    margin: 0 -1.0416666666666665%;
     *zoom: 1;
     display: block;
   }
@@ -1129,7 +1133,7 @@ footer .nav p {
   .whats-on {
     display: inline;
     float: left;
-    width: 72.91666666666666%;
+    width: 97.91666666666666%;
     margin: 0 1.0416666666666665%;
     margin-top: 25px;
   }
@@ -1154,7 +1158,7 @@ footer .nav p {
   .trending {
     display: inline;
     float: left;
-    width: 72.91666666666666%;
+    width: 97.91666666666666%;
     margin: 0 1.0416666666666665%;
     margin-top: 30px;
   }
@@ -1163,28 +1167,15 @@ footer .nav p {
     border-right: 0;
   }
   footer .search {
-    display: inline;
-    float: left;
-    width: 72.91666666666666%;
-    margin: 0 1.0416666666666665%;
-  }
-  footer .search input {
-    width: 223px;
+    display: none;
   }
   footer .newsletter {
-    display: inline;
-    float: left;
-    width: 72.91666666666666%;
-    margin: 0 1.0416666666666665%;
-    text-align: center;
-  }
-  footer .newsletter input {
-    width: 188px;
+    display: none;
   }
   footer .nav {
     display: inline;
     float: left;
-    width: 72.91666666666666%;
+    width: 97.91666666666666%;
     margin: 0 1.0416666666666665%;
   }
   footer .nav ul li {

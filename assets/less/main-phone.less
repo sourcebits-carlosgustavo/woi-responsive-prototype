@@ -1,5 +1,4 @@
 body {
-  padding-top: 15px;
   font-size: 12px;
 }
 
@@ -11,20 +10,23 @@ body {
 .header {
 
   .logo {
-    .column(2);
+    .column(6);
     h1,h2 {
       display: none;
     }
   }
-  .social {
-    display: none;
-  }
-  .actions {
+  .social-actions-col {
     .column(10);
-    padding-top: 8px;
-    select {
-      width: 120px;
-      margin:0;
+    .social {
+      display: none;
+    }
+    .actions {
+      .column(16);
+      padding-top: 8px;
+      select {
+        width: 120px;
+        margin: 5px 0 0 0;
+      }
     }
   }
 }
@@ -33,7 +35,7 @@ body {
   width:100%;
   margin: 15px 0;
   ul {
-    .column(9);
+    .column(16);
     li {
       a {
         display: inline-block;
@@ -46,7 +48,7 @@ body {
 }
 
 .content {
-  .column(12);
+  .column(16);
   margin-top:10px;
 
 
@@ -59,11 +61,11 @@ body {
     }
 
     .arrows {
-      top:65px;
+      top: 95px;
     }
 
     .item {
-      width:320px;
+      width: 511px;
       img {
         width:100%;
       }
@@ -89,11 +91,11 @@ body {
 }
 
 .fb-activity {
-  .column(12);
+  .column(16);
   margin-top:30px;
 
   .container {
-    .row(12);
+    .row(16);
 
     .slider {
 
@@ -105,7 +107,7 @@ body {
 }
 
 .whats-on {
-  .column(12);
+  .column(16);
   margin-top:25px;
 
   .list {
@@ -135,7 +137,7 @@ body {
 }
 
 .trending {
-  .column(12);
+  .column(16);
   margin-top:30px;
 
   .container {
@@ -151,22 +153,15 @@ body {
 footer {
   
   .search {
-    .column(12);
-    input {
-      width: 223px;
-    }
+     display: none;
   }
   
   .newsletter {
-    .column(12);
-    text-align: center;
-    input {
-      width: 188px;
-    }
+   display: none;
   }
   
   .nav {
-    .column(12);
+    .column(16);
     ul {
       li {
         margin-right: 4px;
