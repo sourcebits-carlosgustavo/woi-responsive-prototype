@@ -7,6 +7,9 @@ body {
   margin: 0 auto;
 }
 
+// ------------------------------------
+// MAIN HEADER
+// ------------------------------------
 .header {
 
   .logo {
@@ -24,6 +27,9 @@ body {
   }
 }
 
+// ------------------------------------
+// MAIN NAV
+// ------------------------------------
 .main-nav {
   margin: 15px 0;
   ul {
@@ -36,6 +42,9 @@ body {
   }
 }
 
+// ------------------------------------
+// MAIN CONTENT
+// ------------------------------------
 .content {
   .column(10);
   margin-top:25px;
@@ -57,12 +66,12 @@ body {
   }
 
   .channel-tabs {
-    .row(8);
     margin-top: 30px;
 
     .tab-contents {
       .tab {
         .item {
+          .column(16);
           display: none;
           &:nth-child(-n+3){
             display: block;
@@ -74,22 +83,9 @@ body {
   }
 }
 
-.fb-activity {
-  .column(8);
-  margin-top:30px;
-
-  .container {
-    .row(12);
-
-    .slider {
-
-      .item {
-        width: 350px;
-      }
-    }
-  }
-}
-
+// ------------------------------------
+// SIDEBAR
+// ------------------------------------
 .whats-on {
   .column(6);
   margin-top:25px;
@@ -120,6 +116,24 @@ body {
   }
 }
 
+// ------------------------------------
+// BOTTOM ATTENTION GRABBER
+// ------------------------------------
+.fb-activity {
+  .column(8);
+  margin-top:30px;
+
+  .container {
+    .row(12);
+
+    .slider {
+
+      .item {
+        width: 350px;
+      }
+    }
+  }
+}
 .trending {
   .column(8);
   margin-top:30px;
@@ -134,6 +148,10 @@ body {
   }
 }
 
+
+// ------------------------------------
+// FOOTER
+// ------------------------------------
 footer {
   .search {
     input {
