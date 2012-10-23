@@ -331,6 +331,7 @@ h6.subtitle {
   color: #666;
   background-color: #CCC;
   top: 140px;
+  z-index: 8;
 }
 .content .featured .arrows.next {
   right: 0px;
@@ -343,9 +344,22 @@ h6.subtitle {
   border: #2b2b37 1px solid;
   float: left;
   width: 578px;
+  position: relative;
   border-radius: 5px;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
+}
+.content .featured .item .featured-text {
+  background: rgba(0, 0, 0, 0.8);
+  position: absolute;
+  width: 30%;
+  top: 2px;
+  left: 2px;
+  color: #ebebeb;
+  padding: 5px;
+  border-radius: 3px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
 }
 .content .featured .item img {
   width: 100%;
@@ -561,7 +575,7 @@ h6.subtitle {
 .whats-on .list .row .show {
   padding: 12px;
   float: left;
-  width: 340px;
+  width: 315px;
 }
 .whats-on .list .row .show h2,
 .whats-on .list .row .show h3 {
@@ -593,13 +607,13 @@ h6.subtitle {
   color: #FEEF02;
 }
 .whats-on .list .row .show.q1 {
-  width: 85px;
+  width: 78.75px;
 }
 .whats-on .list .row .show.q2 {
-  width: 170px;
+  width: 157.5px;
 }
 .whats-on .list .row .show.q3 {
-  width: 255px;
+  width: 236.25px;
 }
 .fb-activity {
   display: inline;

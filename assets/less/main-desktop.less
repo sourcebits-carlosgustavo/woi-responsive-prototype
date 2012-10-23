@@ -206,12 +206,13 @@ h6.subtitle {
     .arrows {
       position: absolute;
       padding:3px 6px 10px;
-
       font-weight: bold;
       font-size: 30px;
       color: #666;
       background-color: #CCC;
       top:140px;
+      z-index: 8;
+
       &.next {
         right:0px;
       }
@@ -225,9 +226,19 @@ h6.subtitle {
       border: #2b2b37 1px solid;
       float:left;
       width: 578px;
+      position: relative;
       .rounded-corners;
 
-
+      .featured-text {
+        background: rgba(0, 0, 0, 0.80);
+        position: absolute;
+        width: 30%;
+        top: 2px;
+        left: 2px;
+        color: #ebebeb;
+        padding: 5px;
+        .rounded-corners(3px);
+      }
       img {
         width:100%;
         .rounded-corners;
@@ -447,7 +458,7 @@ h6.subtitle {
       }
       .show {
 
-        @show_width: 340px;
+        @show_width: 315px;
 
         padding: 12px;
         float:left;
