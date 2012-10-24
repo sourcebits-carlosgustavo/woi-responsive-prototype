@@ -2,7 +2,7 @@
 // GENERAL STYLES
 // ------------------------------------
 body {
-  background: #130724 url('../img/body-bg.png') no-repeat top center;
+  background: #120723 url('../img/body-bg.png') no-repeat top center;
   text-align: center;
   font-family: 'DosisRegular', sans-serif;
 }
@@ -13,7 +13,7 @@ h1, h2, h3, h4, h5, h6 {
   line-height: normal;
 }
 
-a:hover { text-decoration: none;}
+a:hover { text-decoration: none; }
 
 textarea,input[type="text"],input[type="password"],input[type="datetime"],input[type="datetime-local"],input[type="date"],input[type="month"],input[type="time"],input[type="week"],input[type="number"],input[type="email"],input[type="url"],input[type="search"],input[type="tel"],input[type="color"],.uneditable-input{background-color:#ffffff;border:1px solid #cccccc;-webkit-box-shadow:inset 0 1px 1px rgba(0, 0, 0, 0.075);-moz-box-shadow:inset 0 1px 1px rgba(0, 0, 0, 0.075);box-shadow:inset 0 1px 1px rgba(0, 0, 0, 0.075);-webkit-transition:border linear .2s, box-shadow linear .2s;-moz-transition:border linear .2s, box-shadow linear .2s;-o-transition:border linear .2s, box-shadow linear .2s;transition:border linear .2s, box-shadow linear .2s;}textarea:focus,input[type="text"]:focus,input[type="password"]:focus,input[type="datetime"]:focus,input[type="datetime-local"]:focus,input[type="date"]:focus,input[type="month"]:focus,input[type="time"]:focus,input[type="week"]:focus,input[type="number"]:focus,input[type="email"]:focus,input[type="url"]:focus,input[type="search"]:focus,input[type="tel"]:focus,input[type="color"]:focus,.uneditable-input:focus{border-color: rgba(229, 29, 88, 0.8);outline:0;outline:thin dotted \9;-webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(229, 29, 88, 0.6);-moz-box-shadow:inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(229, 29, 88, 0.6);box-shadow:inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(229, 29, 88, 0.6);}
 
@@ -43,19 +43,6 @@ html[xmlns] .clearfix { display: block; }
   box-shadow: 0 0 15px 2px #000;
 }
 
-.btn {
-  background: #380928;
-  border: #5b224b 1px solid;
-  .rounded-corners;
-  color: #a85b9c;
-  text-shadow: none;
-  &:hover,
-  &.active{
-    background-color:#2d0823;
-    color: #a85b9c;
-  }
-}
-
 h6.subtitle {
   color: #bda5ba;
   font-family: 'DosisLight', sans-serif;
@@ -69,15 +56,6 @@ h6.subtitle {
 @DosisLight: 'DosisLight', sans-serif;
 @DosisRegular: 'DosisRegular', sans-serif;
 
-// ------------------------------------
-// MIXINS
-// ------------------------------------
-.rounded-corners (@radius: 5px) {
-  border-radius: @radius;
-  -webkit-border-radius: @radius;
-  -moz-border-radius: @radius;
-}
-
 
 // ------------------------------------
 // HEADER
@@ -87,12 +65,12 @@ h6.subtitle {
   padding-top: 10px;
 
   .logo {
-    .column(5);
+    .column(6);
     padding-top: 20px;
 
     .woi-logo {
-      .rounded-corners;
-      
+      .rounded(5px);
+
       float: left;
       margin-right: 15px;
       width: 72px;
@@ -115,7 +93,7 @@ h6.subtitle {
 
   .social-actions-col {
     .column(6);
-    .push(5);
+    .push(4);
     text-align: right;
 
     .social {
@@ -125,12 +103,13 @@ h6.subtitle {
       padding-top: 10px;
 
       select {
+        .rounded(5px);
+
         background: #2b0921;
         border: #512446 1px solid;
         margin-left: 20px;
         width: 100px;
         color: #a85b9c;
-        .rounded-corners;
       }
     }
 
@@ -183,10 +162,11 @@ h6.subtitle {
       padding-top: 2px;
 
       input {
+        .rounded(5px);
+
         background: #2b0921;
         border: #512446 1px solid;
         margin:0 22px;
-        .rounded-corners;
       }  
     }
 
@@ -232,14 +212,17 @@ h6.subtitle {
     }
 
     .item {
+      .rounded(5px);
+
       background: #0c0713;
       border: #2b2b37 1px solid;
       float:left;
       width: 578px;
       position: relative;
-      .rounded-corners;
 
       .featured-text {
+        .rounded(3px);
+
         background: rgba(0, 0, 0, 0.80);
         position: absolute;
         width: 30%;
@@ -247,11 +230,10 @@ h6.subtitle {
         left: 2px;
         color: #ebebeb;
         padding: 5px;
-        .rounded-corners(3px);
       }
       img {
+        .rounded(5px);
         width:100%;
-        .rounded-corners;
       }
       .info {
         float:left;
@@ -292,10 +274,10 @@ h6.subtitle {
             color: #cf7cc2;
           }
           &.active {
+            .rounded(5px);
             background: #ff5806;
             color: #fff;
             padding: 5px 10px;
-            .rounded-corners; 
           }
         }
       }
@@ -325,21 +307,22 @@ h6.subtitle {
           }
 
           .thumb {
+            .rounded(3px);
             position: relative;
             float:left;
             margin-right: 10px;
-            .rounded-corners(3px);
 
             img {
-              .rounded-corners(3px);
+              .rounded(5px);
             }
             .time {
+              .rounded(3px);
+
               position: absolute;
               background: rgba(0, 0, 0, 0.50);
               right: 2px;
               bottom: -8px;
               padding: 0px 5px;
-              .rounded-corners(3px);
               color: #fff;
             }
             .user-actions {
@@ -679,7 +662,8 @@ footer {
     .column(10);
 
     input {
-      .border-radius(0px,0px,0px,0px);
+      .rounded(5px);
+
       float: left;
       border: 0;
       width: 370px;
@@ -688,7 +672,6 @@ footer {
       background: #230824;
       border: 1px solid #3f2336;
       color: #7e6178;
-      .rounded-corners(5px);
     }
     a {
       display: block;
@@ -704,6 +687,7 @@ footer {
   .newsletter {
     .column(6);
     text-align: right;
+
     input {
       float: right;
       border: 0;
@@ -715,7 +699,7 @@ footer {
       color: #7e6178;
     }
     a {
-      .rounded-corners(5px);
+      .rounded(5px);
 
       display: block;
       float: right;
