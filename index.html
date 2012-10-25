@@ -9,7 +9,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
     <!-- Stylsheets -->
-    <!-- <link href='http://fonts.googleapis.com/css?family=Dosis' rel='stylesheet' type='text/css'> -->
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/main.css">
 
@@ -17,13 +16,6 @@
     <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
 
-    <!-- Scripts -->
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
-    <script>window.jQuery || document.write('<script src="assets/js/vendor/jquery-1.8.1.min.js"><\/script>')</script>
-
-    <script src="assets/js/vendor/modernizr-2.6.1.min.js"></script>
-    <script src="assets/js/vendor/bootstrap.min.js"></script>
-    <script src="assets/js/vendor/jquery.breakpoint-min.js"></script>
   </head>
   <body>
     <!--[if lt IE 7]>
@@ -41,10 +33,11 @@
 
         <div class='social-actions-col'>
           <div class='social'>
-            <button class='btn btn-mini'>Like</button>
-            <button class='btn btn-mini'>Follow</button>
-            <button class='btn btn-mini'>+1</button>
-            <button class='btn btn-mini'>RSS</button>
+            <button class='btn btn-mini'><i class="icon-fb"></i></button>
+            <button class='btn btn-mini'><i class="icon-tw"></i></button>
+            <!-- <button class='btn btn-mini'><i class="icon-gp"></i></button> -->
+            <button class='btn btn-mini'><i class="icon-rss"></i></button>
+            <button class='btn btn-mini'><i class="icon-sh"></i></button>
           </div>
           <!-- / social -->
 
@@ -68,7 +61,7 @@
           <li><a href='#' class='active'>HOME</a></li>
           <li><a href='#'>TV GUIDE</a></li>
           <li><a href='#' class=''>CHANNELS</a></li>
-          <li><a href='#' class=''>MOVIES</a></li>
+          <li><a href='#' class='hidden-phone'>MOVIES</a></li>
           <li><a href='#' class='hidden-phone'>VIDEOS</a></li>
           <li><a href='#' class='hidden-phone'>APPS</a></li>
           <li><a href='#' class='visible-phone'>MORE</a></li>
@@ -82,7 +75,6 @@
 
           <div class='search hidden-phone'>
             <input type='text' placeholder='Search TV'>
-            <a href='#' class='hide icon-search'></a>
           </div>
           <!-- / search -->
         </div>
@@ -97,64 +89,88 @@
         <div class='featured'>
 
           <h6 class='subtitle'>FEATURED BY UTV</h6>
-          <div class='container'>
-            <!-- <a href='#' class='arrows prev'>&lt;</a>
-            <a href='#' class='arrows next'>&gt;</a> -->
+          
 
-            <div class='slider'>
+          <div id="myCarousel" class="carousel slide">
+            <!-- Carousel items -->
+            <div class="carousel-inner">
+              <div class="item active clearfix">
+                <img class="featured-image" src="assets/img/featured-1.jpg" alt="">
+                <div class="featured-text">FEATURED By Star Movies</div>
+                <span class='play'>
+                  <a href=""><img src="assets/img/icon-play.png" alt=""></a>
+                </span>
+                
+                <div class="item-content">
+                  <div class='info'>
+                    <h2>Live my life - Ranbir Kapoor</h2>
+                    <p>6:00 PM Today, UTV Stars</p>
+                  </div>
 
-              <div class='item'>
-                <div class="featured-text">FEATURED By Sony Max</div>
-                <img src="assets/img/featured.jpg">
-
-                <div class='info'>
-                  <h2>Live my life - Ranbir Kapoor</h2>
-                  <p>6:00 PM Today, UTV Stars</p>
-                </div>
-
-                <div class='actions'>
-                  <a href='#' class='btn btn-small favourite'>Favourite</a>
-                  <a href='#' class='btn btn-small schedule'>Schedule</a>
-                  <a href='#' class='btn btn-small add-to'>Add to…</a>
-                </div>
-              </div>
-
-              <div class='item'>
-                <div class="featured-text">FEATURED By Sony Max</div>
-                <img src="assets/img/featured.jpg">
-
-                <div class='info'>
-                  <h2>Live my life - Ranbir Kapoor</h2>
-                  <p>6:00 PM Today, UTV Stars</p>
-                </div>
-
-                <div class='actions'>
-                  <a href='#' class='btn btn-small'>Favourite</a>
-                  <a href='#' class='btn btn-small'>Schedule</a>
-                  <a href='#' class='btn btn-small'>Add to…</a>
+                  <div class='actions hidden-phone'>
+                    <a href='#' class='btn btn-small btn-purple-blue'>
+                      <i class='icon-favorite'></i>
+                    </a>
+                    <a href='#' class='btn btn-small btn-purple-blue'>
+                      <i class='icon-reminder'></i>
+                    </a>
+                    <a href='#' class='btn btn-small btn-purple-blue '>
+                      <i class='icon-watchlist'></i>
+                    </a>
+                  </div>
                 </div>
               </div>
-
-              <div class='item'>
+              <div class="item clearfix">
                 <div class="featured-text">FEATURED By Sony Max</div>
-                <img src="assets/img/featured.jpg">
+                <img src="assets/img/featured.jpg" alt="">
+                
+                <div class="item-content">
+                  <div class='info'>
+                    <h2>Ek Tha Tiger</h2>
+                    <p>6:00 PM Today, UTV Stars</p>
+                  </div>
 
-                <div class='info'>
-                  <h2>Live my life - Ranbir Kapoor</h2>
-                  <p>6:00 PM Today, UTV Stars</p>
-                </div>
-
-                <div class='actions'>
-                  <a href='#' class='btn btn-small'>Favourite</a>
-                  <a href='#' class='btn btn-small'>Schedule</a>
-                  <a href='#' class='btn btn-small'>Add to…</a>
+                  <div class='actions hidden-phone'>
+                    <a href='#' class='btn btn-small btn-purple-blue'>
+                      <i class='icon-favorite'></i>
+                    </a>
+                    <a href='#' class='btn btn-small btn-purple-blue'>
+                      <i class='icon-reminder'></i>
+                    </a>
+                    <a href='#' class='btn btn-small btn-purple-blue '>
+                      <i class='icon-watchlist'></i>
+                    </a>
+                  </div>
                 </div>
               </div>
+              <div class="item clearfix">
+                <img src="assets/img/featured-1.jpg" alt="">
+                
+                <div class="item-content">
+                  <div class='info'>
+                    <h2>Live my life - Ranbir Kapoor</h2>
+                    <p>6:00 PM Today, UTV Stars</p>
+                  </div>
 
+                  <div class='actions hidden-phone'>
+                    <a href='#' class='btn btn-small btn-purple-blue'>
+                      <i class='icon-favorite'></i>
+                    </a>
+                    <a href='#' class='btn btn-small btn-purple-blue'>
+                      <i class='icon-reminder'></i>
+                    </a>
+                    <a href='#' class='btn btn-small btn-purple-blue '>
+                      <i class='icon-watchlist'></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
             </div>
-            <!-- / slider -->
+            <!-- Carousel nav -->
+            <a class="carousel-control left" href="#myCarousel" data-slide="prev">&lsaquo;</a>
+            <a class="carousel-control right" href="#myCarousel" data-slide="next">&rsaquo;</a>
           </div>
-          <!-- / container -->
+
         </div>
         <!-- / featured -->
 
@@ -270,9 +286,11 @@
       <aside class='whats-on'>
         <h6 class='subtitle'>WHAT'S ON</h6>
 
-        <nav>
-          <a href='#' class='active'>Now</a>
-          <a href='#'>Next</a>
+        <nav class='clearfix'>
+          <div class="btn-group">
+          <a href='#' class='btn active'>Now</a>
+          <a href='#' class='btn'>Next</a>
+          </div>
           <button class='btn'>Full TV Guide ></button>
         </nav>
 
@@ -283,7 +301,7 @@
 
             <div class='container'>
               <ul>
-                <li>3:00 PM</li>
+                <li class="active">3:00 PM</li>
                 <li>4:00 PM</li>
                 <li>5:00 PM</li>
                 <li>6:00 PM</li>
@@ -491,7 +509,15 @@
     </div>
     <!-- /container -->
 
+    <!-- Scripts -->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="assets/js/vendor/jquery-1.8.1.min.js"><\/script>')</script>
+
+    <script src="assets/js/vendor/modernizr-2.6.1.min.js"></script>
+    <script src="assets/js/vendor/bootstrap.min.js"></script>
+    <script src="assets/js/vendor/jquery.breakpoint-min.js"></script>
     <script src="assets/js/plugins.js"></script>
     <script src="assets/js/main.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
   </body>
 </html>
