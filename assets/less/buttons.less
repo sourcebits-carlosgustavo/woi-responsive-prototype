@@ -29,7 +29,7 @@
   cursor: pointer;
   border: 1px solid #612248;
   *border: 0;
-  filter: progid:dximagetransform.microsoft.gradient(startColorstr='#460b2d', endColorstr='#320822', GradientType=0);
+  filter: progid:dximagetransform.microsoft.gradient(startColorstr='#320822', endColorstr='#460b2d', GradientType=0);
   filter: progid:dximagetransform.microsoft.gradient(enabled=false);
   *zoom: 1;
 }
@@ -160,13 +160,18 @@ input[type="button"].btn-block {
 .btn-purple-blue.active,
 .btn-purple-blue.disabled,
 .btn-purple-blue[disabled] {
-  color: #ffffff;
-  background-color: #26212f;
+  .gradient(#fc6b01, #ff2f0a, #ff440f);
+  
+  border: 1px solid #fe7509;
+  color: #fff;
 }
 
 .btn-purple-blue:active,
 .btn-purple-blue.active {
-  background-color: #26212f \9;
+  .gradient(#fc6b01, #ff2f0a, #ff440f);
+  
+  border: 1px solid #fe7509;
+  display: inline-block;
 }
 
 .btn-primary {
@@ -465,7 +470,7 @@ input[type="submit"].btn.btn-mini {
 }
 
 .btn-group > .btn + .btn {
-  margin-left: -1px;
+  margin-left: 0;
 }
 
 .btn-group > .btn,

@@ -209,6 +209,10 @@ h6.subtitle {
 // MAIN CONTENT
 // ------------------------------------
 
+.main-section {
+  background: url(../img/main-section-bg.png) no-repeat top center;
+}
+
 .content {
   .column(10);
   margin-top: 10px;
@@ -250,14 +254,13 @@ h6.subtitle {
 
       .item {
         .featured-image {
-          .border-radius(5px, 5px, 0, 0);
+          .border-radius(5px, 0, 0, 5px);
         }
         .featured-text {
           .rounded(3px);
 
           background: rgba(0, 0, 0, 0.80);
           position: absolute;
-          width: 30%;
           top: 2px;
           left: 2px;
           color: #ebebeb;
@@ -322,16 +325,21 @@ h6.subtitle {
           }
           &.active {
             .rounded(5px);
-            background: #ff5806;
+            .gradient(#ff4b06, #ff2e0a, #fe6c01);
+
+            border: 1px solid #ff7109;
+            filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff4b06', endColorstr='#ff2f0a', GradientType=0);
+            filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
             color: #fff;
             padding: 5px 10px;
+            text-shadow: 0 5px 9px #FFB971;
           }
         }
       }
     }
 
     .tab-contents {
-      margin-top: 20px;
+      margin-top: 40px;
 
       .tab {
 
@@ -399,12 +407,13 @@ h6.subtitle {
       }
 
       .more {
+        background: url(../img/icons-sprite.png) no-repeat 0 -542px;
         display: block;
-        text-align: center;
         margin-top: 10px;
-        padding: 5px 0;
-        color: #a85b9c;
-        font-size: 1.429em;
+        text-indent: -9999px;
+        width: 46px;
+        height: 46px;
+        margin: 20px auto 0 auto;
       }
     }
   }
@@ -414,7 +423,7 @@ h6.subtitle {
 // ------------------------------------
 // SIDEBAR
 // ------------------------------------
-.whats-on {
+.sidebar {
   .column(6);
 
   margin-top: 10px;
@@ -425,18 +434,43 @@ h6.subtitle {
     margin-bottom: 10px;
 
     .btn-group {
-      float: left
+      float: left;
+      position: relative;
+
+      .expand-btn {
+        .rounded(3px);
+
+        background: rgba(0, 0, 0, 0.8);
+        position: absolute;
+        top: 2px;
+        left: -78px;
+        color: #cdcccc;
+        padding: 5px 12px;
+        font-size: 13px;
+
+        span {
+          font-size: 40px;
+          font-family: 'DosisLight',sans-serif;
+          margin: -6px 6px 0 -6px;
+          float: left;
+        }
+      }
     }
 
     a {
       background: #2c0a2a;
-      font-size: 1.125em;
+      font-size: 1.250em;
       color: #a85b9c;
       text-transform: uppercase; 
       padding: 5px 10px;
       &.active{
-        background: #ff4b06;
+        .gradient(#ff4b06, #ff2e0a, #fe6c01);
+        border-color: #fea201 #fe7607 #fe7c07;
+        border-color: rgba(256, 162, 1, 0.50) rgba(254, 118, 7, 0.40) rgba(0, 0, 0, 0.25);
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff4b06', endColorstr='#ff2f0a', GradientType=0);
+        filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
         color: #fff;
+        text-shadow: 0 5px 9px #FFB971;
       }
     }
     button {
@@ -446,10 +480,12 @@ h6.subtitle {
   }
 
   .list {
-    background: #181123;
+    .border-radius( 5px, 0, 0, 5px);
+
+    background: #180c26;
     border: 1px solid #292238;
 
-    .time {      
+    .time {
       position: relative;
       padding: 0px 27px;
       border-bottom: 1px solid #41173d;
@@ -497,33 +533,48 @@ h6.subtitle {
     .row {
       overflow: hidden;
       border-top: 1px solid #231a32;
+
+      &:nth-child(odd) {
+        background-color: #191224;
+      }
+      &:nth-child(even) {
+        background-color: #1f172d;
+      }
       
       .container {
-        width:99999px;
+        width: 99999px;
       }
       .show {
+        @show_width: 338px;
 
-        @show_width: 315px;
-
-        padding: 12px;
-        float:left;
+        float: left;
+        height: 73px;
         width: @show_width;
+
+        .channel-logo {
+          box-shadow: 5px 0 10px 0px #0e0a16;
+          background: #3d344b;
+          border-right: 1px solid #4d465a;
+          padding: 12px;
+          margin-right: 20px;
+          float: left;
+        }
 
         h2,h3 {
           font-size:14px;
-          margin:0;
-          padding:0;
+          margin: 0;
+          padding: 0;
           line-height: inherit;
         }
         h2 {
           color: #f7e6f5;
+          margin-top: 10px;
         }
         h3 {
           color: #a85b9c;
         }
         img {
           float:left;
-          margin-right: 12px;
           display: none;
         }
         &.active {
@@ -576,7 +627,7 @@ h6.subtitle {
 
       .item {
         width: 278px;
-        padding: 20px 0px 20px 40px;
+        padding: 10px 0px 10px 40px;
         display: inline-block;
 
         img { .rounded(5px); }
