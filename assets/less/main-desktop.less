@@ -222,7 +222,9 @@ h6.subtitle {
 
     .carousel-control {
       .rounded(0);
+      
       border: none;
+      top: 47%;
     } 
     .carousel-control.left {
       left: 2px;
@@ -363,12 +365,19 @@ h6.subtitle {
 
           .thumb {
             .rounded(3px);
+            
             position: relative;
-            float:left;
+            float: left;
             margin-right: 10px;
 
             img {
               .rounded(5px);
+            }
+            .play {
+              position: absolute;
+              left: 65px;
+              top: 30px;
+
             }
             .time {
               .rounded(3px);
@@ -381,7 +390,7 @@ h6.subtitle {
               color: #fff;
             }
             .user-actions {
-              background: rgba(0, 0, 0, 0.46);
+              background: rgba(0, 0, 0, 0.80);
               position: absolute;
               bottom: 0;
               left: 0;
@@ -389,11 +398,18 @@ h6.subtitle {
               height: 30px;
               width: 100%;
               display: none; // Enable it when user login
+
+              .btn-purple-blue {
+                padding: 1px;
+                margin: 4px 16px;
+
+                i { height: 20px; width: 20px; }
+              }
             }
 
             a {
               float:left;
-              margin-top: 10px;
+              margin-top: 2px;
             }
             .icon-plus {
               margin-left:60px;
@@ -822,6 +838,7 @@ footer {
     p {
       color: #814375;
       font-size: 1.000em;
+      clear: both;
     }
   }
 
@@ -841,8 +858,8 @@ footer {
     }
 
     p {
-      float:right;
-      color:#814375;
+      float: right;
+      color: #814375;
     }
   }
 }

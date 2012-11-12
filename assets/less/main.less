@@ -19,3 +19,30 @@
 @media screen and (max-width:480px){
   @import 'main-phone.less';
 }
+
+// ------------------------------------
+// ORIENTATION RULES
+// ------------------------------------
+
+@media screen and (device-width: 768px) and (device-height: 1024px) and (orientation:portrait) {
+
+  .tab {
+    
+    .item {
+      height: 205px !important;
+
+      h2 {
+        padding: 5px 0 0 0;
+        margin: 0 !important;
+        clear: both;
+      }
+    }
+  }
+
+ 	.trending {
+    .item {
+      width: 295px !important;
+      border-right: 0;
+    }
+	}
+}
