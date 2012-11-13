@@ -42,14 +42,77 @@
           <!-- / social -->
 
           <div class='actions'>
-            <button class='btn'>Sign Up</button>
-            <button class='btn'>Log In</button>
 
-            <select>
-              <option>Language</option>
-              <option>English</option>
-              <option>Portuguese</option>
-            </select>
+            <div class='select-language'>
+              <a class='btn' id='selectLanguage'>Language <span class='arrow'></span></a>
+
+              <div class='choose-language' style="display: none;">
+                <div class='header'>
+                  <h4>Choose your TV Language</h4>
+                  <p>Auto Location: <span class='location'>Bangalore</span><span class='close'>&times;</span></p>
+                </div>
+                <ul class='language-list'>
+                  <li>
+                    <a>
+                      <label for="english">English</label>
+                      <input type="checkbox" id="english">
+                    </a>
+                  </li>
+                  <li>
+                    <a>
+                    <label for="hindi">Hindi</label>
+                    <input type="checkbox" id="hindi">
+                    </a>
+                  </li>
+                  <li>
+                    <a>
+                    <label for="malayalam">Malayalam</label>
+                    <input type="checkbox" id="malayalam">
+                    </a>
+                  </li>
+                  <li>
+                    <a>
+                    <label for="kannada">Kannada</label>
+                    <input type="checkbox" id="kannada">
+                    </a>
+                  </li>
+                  <li class="disabled">
+                    <a>
+                    <label for="marathi">Marathi</label>
+                    <input type="checkbox" id="marathi" disabled="disabled">
+                    </a>
+                  </li>
+                  <li>
+                    <a>
+                    <label for="tamil">Tamil</label>
+                    <input type="checkbox" id="tamil">
+                    </a>
+                  </li>
+                  <li>
+                    <a>
+                    <label for="telegu">Telegu</label>
+                    <input type="checkbox" id="telegu">
+                    </a>
+                  </li>
+                  <li class="disabled">
+                    <a>
+                    <label for="oriya">Oriya</label>
+                    <input type="checkbox" id="oriya" disabled="disabled">
+                    </a>
+                  </li>
+
+                </ul>
+                <div class='footer'>
+                  <a href="">More Languages</a>
+                </div>
+              </div>
+            </div>
+
+            <div class='members-area'>
+              <button class='btn'>Sign In</button>
+              <button class='btn'>Register</button>
+            </div>
+
           </div>
           <!-- / actions -->
         </div>
@@ -69,7 +132,25 @@
 
         <div class="nav-right">
           <div class='watchlist hidden-phone'>
-            <button class='btn'>My Watchlist</button>
+            <button class='btn' id="watchList">My Watchlist</button>
+
+            <div class='watchlist-dropdown' style="display:none">
+              <div class="watchlist-content">
+                <h4>Create Your Watchlist</h4>
+                <p>Follow your favorites on TV</p>
+
+                <div class="image-reminders"></div>
+
+                <div class="member-actions clearfix">
+                  <a class='btn btn-light-blue'>Sign Up</a>
+                  <a class='btn btn-light-green'>Log In</a>
+                </div>
+              </div>
+
+              <div class="footer">
+                <a href="">How does it works?</a>
+              </div>
+            </div>
           </div>
           <!-- / watchlist -->
 
